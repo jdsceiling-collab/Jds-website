@@ -12,6 +12,7 @@
       color: #111827;
       line-height: 1.6;
     }
+
     header {
       background: #0b1b3d;
       color: #fff;
@@ -21,10 +22,24 @@
       z-index: 10;
     }
     .wrap { max-width: 1000px; margin: 0 auto; }
+    .topbar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 6px;
+    }
+    .logo {
+      width: 42px;
+      height: auto;
+      border-radius: 8px;
+      background: #fff;
+      padding: 4px;
+    }
     .brand { font-size: 22px; font-weight: 700; }
     .tagline { font-size: 13px; opacity: 0.8; }
+
     nav {
-      margin-top: 10px;
+      margin-top: 4px;
       display: flex;
       flex-wrap: wrap;
       gap: 16px;
@@ -38,18 +53,35 @@
 
     main { padding: 24px 16px 40px; }
     .hero {
+      position: relative;
       background: linear-gradient(135deg, #e0f2fe, #eff6ff);
       border-radius: 16px;
       padding: 24px 20px;
       margin-bottom: 24px;
       box-shadow: 0 10px 30px rgba(15,23,42,0.15);
+      overflow: hidden;
     }
+    /* Ceiling-grid effect */
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(148,163,184,0.4) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(148,163,184,0.4) 1px, transparent 1px);
+      background-size: 40px 40px;
+      opacity: 0.35;
+      pointer-events: none;
+    }
+    .hero-content { position: relative; z-index: 1; }
+
     .hero h1 {
       font-size: 26px;
       margin-bottom: 8px;
     }
     .hero p { font-size: 15px; margin-bottom: 12px; }
     .hero .sub { font-size: 14px; color: #374151; margin-bottom: 18px; }
+
     .btn-row { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 10px; }
     .btn {
       display: inline-block;
@@ -99,6 +131,7 @@
       color: #6b7280;
     }
     .footer strong { color: #111827; }
+
     @media (min-width: 768px) {
       .hero h1 { font-size: 32px; }
     }
@@ -107,8 +140,13 @@
 <body>
   <header>
     <div class="wrap">
-      <div class="brand">JDS Ceilings &amp; Partitions</div>
-      <div class="tagline">Ceilings • Partitions • Drylining</div>
+      <div class="topbar">
+        <img src="jds-logo.png" alt="JDS Ceilings &amp; Partitions logo" class="logo" />
+        <div>
+          <div class="brand">JDS Ceilings &amp; Partitions</div>
+          <div class="tagline">Ceilings • Partitions • Drylining</div>
+        </div>
+      </div>
       <nav>
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
@@ -123,14 +161,16 @@
   <main>
     <div class="wrap">
       <section class="hero">
-        <h1>Professional ceilings, partitions &amp; drylining across Newcastle.</h1>
-        <p>Suspended ceilings, MF systems, stud walls, repairs and all drylining work for homes, landlords and businesses.</p>
-        <p class="sub">10+ years&rsquo; on the tools delivering clean, tidy and reliable work across Newcastle upon Tyne &amp; surrounding areas.</p>
-        <div class="btn-row">
-          <a class="btn" href="https://wa.me/447523825903" target="_blank">WhatsApp for a Quote</a>
-          <a class="btn outline" href="quote.html">Request a Quote Online</a>
+        <div class="hero-content">
+          <h1>Professional ceilings, partitions &amp; drylining across Newcastle.</h1>
+          <p>Suspended ceilings, MF systems, stud walls, repairs and all drylining work for homes, landlords and businesses.</p>
+          <p class="sub">10+ years&rsquo; on the tools delivering clean, tidy and reliable work across Newcastle upon Tyne &amp; surrounding areas.</p>
+          <div class="btn-row">
+            <a class="btn" href="https://wa.me/447523825903" target="_blank">WhatsApp for a Quote</a>
+            <a class="btn outline" href="quote.html">Request a Quote Online</a>
+          </div>
+          <p style="font-size:12px;color:#6b7280;">Fast replies • Free, no-obligation quotes • Evening / weekend visits available.</p>
         </div>
-        <p style="font-size:12px;color:#6b7280;">Fast replies • Free, no-obligation quotes • Evening / weekend visits available.</p>
       </section>
 
       <h2 class="section-title">Our Main Services</h2>
