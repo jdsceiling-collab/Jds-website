@@ -1,111 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JDS Ceilings & Partitions | Newcastle</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JDS Ceilings & Partitions | Newcastle</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f3f4f6;
+      color: #111827;
+      line-height: 1.6;
+    }
+    header {
+      background: #0b1b3d;
+      color: #fff;
+      padding: 16px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .wrap { max-width: 1000px; margin: 0 auto; }
+    .brand { font-size: 22px; font-weight: 700; }
+    .tagline { font-size: 13px; opacity: 0.8; }
+    nav {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 14px;
+    }
+    nav a {
+      color: #e5e7eb;
+      text-decoration: none;
+    }
+    nav a:hover { color: #60a5fa; }
 
-    <meta name="description" content="Professional suspended ceilings, MF systems, partitions, drylining & ceiling repairs across Newcastle and the North East. Free quotes." />
-    <meta name="keywords" content="ceilings, partitions, drylining, MF ceilings, ceiling repairs, Newcastle ceilings, media walls" />
+    main { padding: 24px 16px 40px; }
+    .hero {
+      background: linear-gradient(135deg, #e0f2fe, #eff6ff);
+      border-radius: 16px;
+      padding: 24px 20px;
+      margin-bottom: 24px;
+      box-shadow: 0 10px 30px rgba(15,23,42,0.15);
+    }
+    .hero h1 {
+      font-size: 26px;
+      margin-bottom: 8px;
+    }
+    .hero p { font-size: 15px; margin-bottom: 12px; }
+    .hero .sub { font-size: 14px; color: #374151; margin-bottom: 18px; }
+    .btn-row { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 10px; }
+    .btn {
+      display: inline-block;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      border: 1px solid #2563eb;
+      background: #2563eb;
+      color: #fff;
+      text-align: center;
+    }
+    .btn.outline {
+      background: #fff;
+      color: #2563eb;
+    }
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #f4f4f4;
-            color: #222;
-        }
-        header {
-            background: #0a1a2f;
-            color: white;
-            padding: 15px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        header img {
-            height: 45px;
-        }
-        nav a {
-            margin: 0 10px;
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .hero {
-            background: linear-gradient(to bottom right, #cfe2ff, #e8f0ff);
-            padding: 40px 20px;
-            text-align: center;
-        }
-        .hero h1 {
-            font-size: 28px;
-            margin-bottom: 10px;
-        }
-        .hero p {
-            font-size: 16px;
-            margin-bottom: 20px;
-        }
-        .btn {
-            background: #007bff;
-            color: white;
-            padding: 12px 18px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: bold;
-        }
-        .section {
-            background: white;
-            margin: 20px;
-            padding: 20px;
-            border-radius: 15px;
-        }
-        footer {
-            background: #0a1a2f;
-            color: white;
-            padding: 15px;
-            text-align: center;
-            margin-top: 30px;
-        }
-    </style>
+    h2.section-title {
+      font-size: 20px;
+      margin: 18px 0 10px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 16px 16px 18px;
+      box-shadow: 0 6px 20px rgba(15,23,42,0.08);
+    }
+    .card h3 {
+      font-size: 17px;
+      margin-bottom: 6px;
+    }
+    .card p { font-size: 14px; margin-bottom: 8px; color: #4b5563; }
+    .card ul { padding-left: 18px; font-size: 14px; color: #374151; }
+    .card ul li { margin-bottom: 4px; }
+
+    .footer {
+      margin-top: 30px;
+      font-size: 13px;
+      text-align: center;
+      color: #6b7280;
+    }
+    .footer strong { color: #111827; }
+    @media (min-width: 768px) {
+      .hero h1 { font-size: 32px; }
+    }
+  </style>
 </head>
-
 <body>
+  <header>
+    <div class="wrap">
+      <div class="brand">JDS Ceilings &amp; Partitions</div>
+      <div class="tagline">Ceilings • Partitions • Drylining</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="quote.html">Get a Quote</a>
+      </nav>
+    </div>
+  </header>
 
-<header>
-    <img src="https://i.imgur.com/0Xj5F2G.png" alt="JDS Logo" />
-    <h2>JDS Ceilings & Partitions</h2>
-</header>
+  <main>
+    <div class="wrap">
+      <section class="hero">
+        <h1>Professional ceilings, partitions &amp; drylining across Newcastle.</h1>
+        <p>Suspended ceilings, MF systems, stud walls, repairs and all drylining work for homes, landlords and businesses.</p>
+        <p class="sub">10+ years&rsquo; on the tools delivering clean, tidy and reliable work across Newcastle upon Tyne &amp; surrounding areas.</p>
+        <div class="btn-row">
+          <a class="btn" href="https://wa.me/447523825903" target="_blank">WhatsApp for a Quote</a>
+          <a class="btn outline" href="quote.html">Request a Quote Online</a>
+        </div>
+        <p style="font-size:12px;color:#6b7280;">Fast replies • Free, no-obligation quotes • Evening / weekend visits available.</p>
+      </section>
 
-<nav style="background:#0a1a2f; padding:10px; text-align:center;">
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="about.html">About</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
-</nav>
+      <h2 class="section-title">Our Main Services</h2>
+      <section class="grid">
+        <article class="card">
+          <h3>MF &amp; Suspended Grid Ceilings</h3>
+          <p>New ceilings, replacements and repairs for homes, shops and offices.</p>
+          <ul>
+            <li>MF ceilings</li>
+            <li>Suspended grid ceilings</li>
+            <li>Ceiling tile replacement</li>
+            <li>Plasterboard ceilings &amp; bulkheads</li>
+          </ul>
+        </article>
 
-<div class="hero">
-    <h1>Professional ceilings, partitions & drylining across Newcastle.</h1>
-    <p>10+ years experience in suspended ceilings, MF systems, stud walls, repairs and all drylining work.</p>
-    <a class="btn" href="https://wa.me/447523825903">WhatsApp for a Quote</a>
-</div>
+        <article class="card">
+          <h3>Stud Walls &amp; Partitions</h3>
+          <p>Create new rooms and tidy up awkward spaces.</p>
+          <ul>
+            <li>Metal stud partitions</li>
+            <li>Room splits &amp; wall moves</li>
+            <li>Soundproofing &amp; insulation</li>
+            <li>Boxing-in pipes &amp; services</li>
+          </ul>
+        </article>
 
-<div class="section">
-    <h2>Our Main Services</h2>
-    <ul>
-        <li>MF & suspended grid ceilings</li>
-        <li>Stud walls & partitions</li>
-        <li>Ceiling tile replacement</li>
-        <li>Plasterboard ceilings</li>
-        <li>Soundproofing & insulation</li>
-        <li>Media walls & TV features</li>
-    </ul>
-</div>
+        <article class="card">
+          <h3>Media Walls &amp; Features</h3>
+          <p>Modern TV walls built to suit your room and budget.</p>
+          <ul>
+            <li>Media walls &amp; TV features</li>
+            <li>LED recesses &amp; shelving</li>
+            <li>Fireplace surrounds</li>
+          </ul>
+        </article>
 
-<footer>
-    Working across Newcastle upon Tyne & surrounding areas — Free no-obligation quotes.
-</footer>
+        <article class="card">
+          <h3>Repairs &amp; Landlord Works</h3>
+          <p>Fast repairs to keep your property looking sharp.</p>
+          <ul>
+            <li>Patch plasterboard &amp; ceiling damage</li>
+            <li>Grid &amp; tile repairs after leaks</li>
+            <li>Small maintenance jobs</li>
+          </ul>
+        </article>
+      </section>
 
+      <div class="footer">
+        Working across <strong>Newcastle upon Tyne</strong> &amp; surrounding areas — get in touch for a free, no-obligation quote.
+      </div>
+    </div>
+  </main>
 </body>
 </html>
