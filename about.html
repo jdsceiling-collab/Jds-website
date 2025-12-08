@@ -1,84 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us | JDS Ceilings & Partitions</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - JDS Ceilings & Partitions</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f3f4f6;
+      color: #111827;
+      line-height: 1.6;
+    }
+    header {
+      background: #0b1b3d;
+      color: #fff;
+      padding: 16px 20px;
+    }
+    .wrap { max-width: 1000px; margin: 0 auto; }
+    .brand { font-size: 22px; font-weight: 700; }
+    .tagline { font-size: 13px; opacity: 0.8; }
+    nav {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 14px;
+    }
+    nav a {
+      color: #e5e7eb;
+      text-decoration: none;
+    }
+    nav a:hover { color: #60a5fa; }
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #f4f4f4;
-            color: #222;
-        }
-        header {
-            background: #0a1a2f;
-            color: white;
-            padding: 15px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        header img { height: 45px; }
-        nav {
-            background: #0a1a2f;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            margin: 0 10px;
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .wrap {
-            max-width: 900px;
-            margin: 20px auto;
-            padding: 20px;
-        }
-        .card {
-            background: white;
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #0a1a2f;
-            margin-top: 0;
-        }
-        ul { line-height: 1.7; }
-        footer {
-            background: #0a1a2f;
-            color: white;
-            padding: 15px;
-            text-align: center;
-            margin-top: 40px;
-        }
-    </style>
+    main { padding: 24px 16px 40px; }
+    h1 { font-size: 24px; margin-bottom: 10px; }
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 18px 18px 20px;
+      box-shadow: 0 8px 24px rgba(15,23,42,0.12);
+      margin-bottom: 18px;
+    }
+    .card p { font-size: 14px; color: #374151; margin-bottom: 10px; }
+    h2 { font-size: 18px; margin: 12px 0 6px; }
+    ul { padding-left: 18px; font-size: 14px; color: #374151; }
+    ul li { margin-bottom: 4px; }
+    .cta {
+      font-size: 14px;
+      margin-top: 10px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 9px 16px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      border: 1px solid #2563eb;
+      background: #2563eb;
+      color: #fff;
+      text-align: center;
+      margin-top: 8px;
+    }
+  </style>
 </head>
-
 <body>
+  <header>
+    <div class="wrap">
+      <div class="brand">JDS Ceilings &amp; Partitions</div>
+      <div class="tagline">Ceilings • Partitions • Drylining</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="quote.html">Get a Quote</a>
+      </nav>
+    </div>
+  </header>
 
-<header>
-    <img src="https://i.imgur.com/0Xj5F2G.png" alt="JDS Logo" />
-    <h2>JDS Ceilings & Partitions</h2>
-</header>
+  <main>
+    <div class="wrap">
+      <h1>About JDS Ceilings &amp; Partitions</h1>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="about.html">About</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
-</nav>
+      <section class="card">
+        <p>
+          JDS Ceilings &amp; Partitions is a small, hands-on business based in
+          Newcastle upon Tyne. I&rsquo;m Jason, and I&rsquo;ve spent over
+          <strong>10 years on the tools</strong> working on ceilings, partitions,
+          media walls and drylining across homes, shops and commercial buildings.
+        </p>
+        <p>
+          I look after the job from start to finish – from the first message and
+          measuring up, through to doing the work and making sure everything is
+          left clean and tidy.
+        </p>
+      </section>
 
-<div class="wrap">
-    <div class="card">
-        <h1>About JDS Ceilings & Partitions</h1>
+      <section class="card">
+        <h2>What I specialise in</h2>
+        <ul>
+          <li>MF ceilings and suspended grid ceilings</li>
+          <li>Plasterboard ceilings, bulkheads and feature details</li>
+          <li>Metal stud walls and room splits</li>
+          <li>Media walls &amp; TV feature walls</li>
+          <li>Soundproofing and insulation upgrades</li>
+          <li>Ceiling &amp; wall repairs for leaks and damage</li>
+        </ul>
+      </section>
 
-        <p>With over <strong>10 years’ experience</strong> in ceilings, partitions and drylining, JDS Ceilings & Partitions provides clean, reliable and affordable work across Newcastle upon Tyne and the North East.</p>
+      <section class="card">
+        <h2>Why customers choose JDS</h2>
+        <ul>
+          <li><strong>Honest advice</strong> – I&rsquo;ll tell you what will work best, not just the most expensive option.</li>
+          <li><strong>Reliable</strong> – I turn up when I say I will and keep you updated.</li>
+          <li><strong>Good finish</strong> – straight lines, solid fixing and tidy work.</li>
+          <li><strong>Respect for your home</strong> – dust sheets down, rubbish cleared, no mess left behind.</li>
+        </ul>
+      </section>
 
-        <p>We take on everything from small ceiling repairs to full MF and grid ceiling installs, media walls, stud walls and full room refits.</p>
-
-        <h3>Why customers choose
+      <section class="card">
+        <h2>Areas covered</h2>
+        <p>
+          I mainly work across <strong>Newcastle upon Tyne</strong> and nearby
+          areas around the North East. If you&rsquo;re not sure if you&rsquo;re in range,
+          just send a quick message and I&rsquo;ll let you know.
+        </p>
+        <div class="cta">
+          Ready to chat about a job?
+          <br />
+          <a class="btn" href="https://wa.me/447523825903" target="_blank">
+            WhatsApp Jason for a Quote
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
