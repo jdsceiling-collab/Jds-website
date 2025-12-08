@@ -1,50 +1,490 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>JDS Property & Building Services</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <title>JDS Property & Building Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<meta name="description" content="Ceilings, media walls, stud walls, repairs and building services in Newcastle.">
-<meta name="keywords" content="ceilings Newcastle, media walls Newcastle, drylining Newcastle, building services Newcastle, stud walls Newcastle, repairs Newcastle">
+  <meta name="description" content="Professional ceilings, media walls, stud walls, repairs and property services in Newcastle and the North East.">
+  <meta name="keywords" content="ceilings Newcastle, drylining Newcastle, media walls Newcastle, building services Newcastle, stud walls Newcastle, property maintenance Newcastle">
 
-<style>
-body { background:#111; color:#fff; font-family:Arial, sans-serif; margin:0; }
-header { background:#0a1a2f; padding:20px; text-align:center; }
-nav a { color:#4db8ff; margin:10px; text-decoration:none; font-weight:bold; }
-section { padding:20px; max-width:900px; margin:auto; }
-h2 { color:#4db8ff; }
-.box { background:#1a1a1a; padding:15px; margin:10px 0; border-radius:6px; }
-</style>
+  <style>
+    :root {
+      --blue: #2563eb;
+      --blue-dark: #1d4ed8;
+      --blue-soft: #dbeafe;
+      --bg: #f3f4f6;
+      --text: #111827;
+      --card-bg: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    /* NAVBAR */
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav-container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .brand-title {
+      font-weight: 800;
+      letter-spacing: 0.03em;
+      font-size: 1.1rem;
+    }
+
+    .brand-sub {
+      font-size: 0.75rem;
+      color: #6b7280;
+      text-transform: uppercase;
+    }
+
+    nav a {
+      color: #4b5563;
+      margin-left: 16px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: var(--blue);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-nav {
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border: 1px solid var(--blue);
+      background: #ffffff;
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    .btn-nav.primary {
+      background: var(--blue);
+      color: #ffffff;
+      border-color: var(--blue);
+    }
+
+    .btn-nav.primary:hover {
+      background: var(--blue-dark);
+    }
+
+    /* HERO */
+    .hero {
+      background: radial-gradient(circle at top left, #eff6ff 0, #dbeafe 30%, #eff6ff 100%);
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .hero-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 32px 16px 40px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      gap: 24px;
+      align-items: center;
+    }
+
+    .hero-title {
+      font-size: 2rem;
+      line-height: 1.2;
+      font-weight: 800;
+      margin: 0 0 12px;
+      color: #111827;
+    }
+
+    .hero-highlight {
+      color: var(--blue);
+    }
+
+    .hero-sub {
+      margin: 0 0 20px;
+      color: #4b5563;
+      font-size: 0.95rem;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .badge {
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #e5edff;
+      color: #1e3a8a;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .btn-hero {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: none;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .btn-hero.primary {
+      background: var(--blue);
+      color: #ffffff;
+    }
+
+    .btn-hero.primary:hover {
+      background: var(--blue-dark);
+    }
+
+    .btn-hero.secondary {
+      background: #ffffff;
+      color: #111827;
+      border: 1px solid #d1d5db;
+    }
+
+    .hero-note {
+      margin-top: 10px;
+      font-size: 0.8rem;
+      color: #6b7280;
+    }
+
+    .hero-right {
+      position: relative;
+    }
+
+    .hero-card {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 16px;
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.18);
+      border: 1px solid #e5e7eb;
+    }
+
+    .grid-preview {
+      border-radius: 12px;
+      background-image: linear-gradient(135deg, #dbeafe 0%, #eff6ff 50%, #e5e7eb 100%);
+      padding: 12px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 4px;
+      margin-bottom: 12px;
+    }
+
+    .grid-tile {
+      background: #0f172a;
+      opacity: 0.95;
+      border-radius: 3px;
+    }
+
+    .grid-tile.light {
+      background: #e5e7eb;
+    }
+
+    .hero-card-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .hero-card-text {
+      font-size: 0.8rem;
+      color: #6b7280;
+      margin: 0;
+    }
+
+    /* MAIN CONTENT SECTIONS */
+    .section {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 32px 16px;
+    }
+
+    .section-title {
+      font-size: 1.3rem;
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+
+    .section-sub {
+      font-size: 0.9rem;
+      color: #6b7280;
+      margin-bottom: 20px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 14px;
+      padding: 16px;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+      border: 1px solid #e5e7eb;
+    }
+
+    .card-title {
+      font-weight: 700;
+      margin-bottom: 4px;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .card-icon {
+      font-size: 1.2rem;
+    }
+
+    .card-text {
+      font-size: 0.9rem;
+      color: #4b5563;
+      margin: 0 0 6px;
+    }
+
+    .card-list {
+      padding-left: 18px;
+      margin: 0;
+      font-size: 0.85rem;
+      color: #4b5563;
+    }
+
+    .card-list li {
+      margin-bottom: 2px;
+    }
+
+    /* AREA STRIP */
+    .area-strip {
+      background: #111827;
+      color: #e5e7eb;
+      padding: 16px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    .area-strip strong {
+      color: #bfdbfe;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .hero-inner {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      nav {
+        display: none; /* keep it simple on mobile for now */
+      }
+
+      .nav-actions {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 4px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-<h1>JDS Property & Building Services</h1>
-<nav>
-<a href="index.html">Home</a>
-<a href="services.html">Services</a>
-<a href="gallery.html">Gallery</a>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
-<a href="quote.html">Request a Quote</a>
-</nav>
-</header>
+  <!-- NAVBAR & BRAND -->
+  <header>
+    <div class="nav-container">
+      <div class="brand">
+        <span class="brand-title">JDS PROPERTY & BUILDING SERVICES</span>
+        <span class="brand-sub">Ceilings • Media Walls • Property Repairs</span>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="quote.html">Get a Quote</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn-nav" href="tel:07523825903">Call: 07523 825903</a>
+        <a class="btn-nav primary" href="https://wa.me/447523825903">WhatsApp</a>
+      </div>
+    </div>
+  </header>
 
-<section>
-<h2>Welcome</h2>
-<p>Professional ceilings, drylining, media walls, repairs and building services across Newcastle & the North East.</p>
-<a href="https://wa.me/447523825903" style="background:#4db8ff;color:#000;padding:12px 18px;border-radius:6px;text-decoration:none;font-weight:bold;">WhatsApp Quote</a>
-</section>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-inner">
+      <!-- LEFT -->
+      <div>
+        <h1 class="hero-title">
+          Professional <span class="hero-highlight">ceilings, media walls & property repairs</span> across Newcastle.
+        </h1>
+        <p class="hero-sub">
+          10+ years’ experience in ceilings, stud walls, media walls, insulation and general building work.
+          Clean, reliable and affordable for homes, landlords and businesses.
+        </p>
+        <div class="hero-badges">
+          <span class="badge">MF & Grid Ceilings</span>
+          <span class="badge">Media Walls</span>
+          <span class="badge">Landlord Repairs</span>
+        </div>
+        <div class="hero-actions">
+          <a class="btn-hero primary" href="https://wa.me/447523825903">
+            💬 WhatsApp for a Quote
+          </a>
+          <a class="btn-hero secondary" href="quote.html">
+            📄 Request a Quote Online
+          </a>
+        </div>
+        <p class="hero-note">Based in Newcastle upon Tyne • Covering surrounding areas across the North East.</p>
+      </div>
 
-<section>
-<h2>Key Services</h2>
-<div class="box">Ceilings (MF, Grid, Plasterboard)</div>
-<div class="box">Media Walls & Stud Walls</div>
-<div class="box">Property Repairs & Maintenance</div>
-<div class="box">Home Improvements</div>
-</section>
+      <!-- RIGHT: GRID PREVIEW CARD -->
+      <div class="hero-right">
+        <div class="hero-card">
+          <div class="grid-preview">
+            <div class="grid-tile"></div>
+            <div class="grid-tile light"></div>
+            <div class="grid-tile"></div>
+            <div class="grid-tile light"></div>
+            <div class="grid-tile light"></div>
+            <div class="grid-tile"></div>
+            <div class="grid-tile light"></div>
+            <div class="grid-tile"></div>
+            <div class="grid-tile"></div>
+            <div class="grid-tile light"></div>
+            <div class="grid-tile"></div>
+            <div class="grid-tile light"></div>
+            <div class="grid-tile light"></div>
+            <div class="grid-tile"></div>
+            <div class="grid-tile light"></div>
+            <div class="grid-tile"></div>
+          </div>
+          <p class="hero-card-title">Suspended ceilings & MF systems</p>
+          <p class="hero-card-text">
+            From one room to full office grids – we install, repair and replace ceilings quickly and safely.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEY SERVICES SECTION -->
+  <section class="section">
+    <h2 class="section-title">What we can help with</h2>
+    <p class="section-sub">
+      Full property and building services – from ceilings and stud walls to media walls, repairs and improvements.
+    </p>
+
+    <div class="services-grid">
+      <div class="card">
+        <div class="card-title">
+          <span class="card-icon">🧱</span> Ceilings & Drylining
+        </div>
+        <p class="card-text">All types of ceiling and plasterboard work for homes, shops and offices.</p>
+        <ul class="card-list">
+          <li>MF & suspended grid ceilings</li>
+          <li>Plasterboard ceilings & bulkheads</li>
+          <li>Ceiling tile replacement</li>
+          <li>Soundproofing & insulation</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-title">
+          <span class="card-icon">📺</span> Media Walls & Stud Walls
+        </div>
+        <p class="card-text">Modern feature walls built to suit your TV, storage and lighting.</p>
+        <ul class="card-list">
+          <li>Media walls & feature walls</li>
+          <li>Stud walls & room splits</li>
+          <li>Boxing-in pipes & services</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-title">
+          <span class="card-icon">🛠️</span> Property Repairs
+        </div>
+        <p class="card-text">Fast, tidy repairs for landlords, agents and homeowners.</p>
+        <ul class="card-list">
+          <li>Ceiling & wall repairs</li>
+          <li>Patch plasterboard & damage</li>
+          <li>General property maintenance</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-title">
+          <span class="card-icon">🏡</span> Home Improvements
+        </div>
+        <p class="card-text">Small changes that make a big difference to your home.</p>
+        <ul class="card-list">
+          <li>Loft & garage boarding</li>
+          <li>TV wall installs</li>
+          <li>Insulation upgrades</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- AREA STRIP -->
+  <div class="area-strip">
+    Working across <strong>Newcastle upon Tyne</strong> &amp; surrounding areas – get in touch for a free, no-obligation quote.
+  </div>
 
 </body>
 </html>
