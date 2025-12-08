@@ -1,71 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Us | JDS Ceilings & Partitions</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - JDS Ceilings & Partitions</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:#f3f4f6;
+      color:#111827;
+      line-height:1.6;
+    }
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #f4f4f4;
-            color: #222;
-        }
-        header {
-            background: #0a1a2f;
-            color: white;
-            padding: 15px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        header img { height: 45px; }
-        nav {
-            background: #0a1a2f;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            margin: 0 10px;
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .wrap {
-            max-width: 900px;
-            margin: 20px auto;
-            padding: 20px;
-        }
-        .card {
-            background: white;
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
-        }
-        h1 {
-            text-align: center;
-            color: #0a1a2f;
-            margin-top: 0;
-        }
-        label {
-            display: block;
-            margin-top: 10px;
-            font-size: 14px;
-        }
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            margin-top: 4px;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            font-size: 15px;
-        }
-        button {
-            margin-top: 15px;
-            padding: 12px 18px;
-            background: #007bff;
-            border: none;
-            color: white;
-            font-weight
+    header {
+      background:#0b1b3d;
+      color:#fff;
+      padding:16px 20px;
+    }
+    .wrap { max-width:1000px; margin:0 auto; }
+
+    .topbar {
+      display:flex;
+      align-items:center;
+      gap:12px;
+      margin-bottom:6px;
+    }
+    .logo {
+      width:42px;
+      height:auto;
+      border-radius:8px;
+      background:#fff;
+      padding:4px;
+    }
+    .brand { font-size:22px; font-weight:700; }
+    .tagline { font-size:13px; opacity:0.8; }
+
+    nav {
+      margin-top:4px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:16px;
+      font-size:14px;
+    }
+    nav a {
+      color:#e5e7eb;
+      text-decoration:none;
+    }
+    nav a:hover { color:#60a5fa; }
+
+    main { padding:24px 16px 40px; }
+
+    .card {
+      background:#fff;
+      border-radius:16px;
+      padding:18px 18px 20px;
+      box-shadow:0 8px 24px rgba(15,23,42,0.12);
+      margin-bottom:18px;
+      font-size:14px;
+      color:#374151;
+    }
+
+    h1 { font-size:24px; margin-bottom:10px; }
+    h2 { font-size:18px; margin:10px 0 6px; }
+
+    .btn-row {
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:12px;
+      margin-bottom:4px;
+    }
+    .btn {
+      display:inline-block;
+      padding:9px 16px;
+      border-radius:999px;
+      font-weight:600;
+      font-size:14px;
+      text-decoration:none;
+      border:1px solid #2563eb;
+      background:#2563eb;
+      color:#fff;
+      text-align:center;
+    }
+    .btn.secondary {
+      background:#fff;
+      color:#2563eb;
+    }
+
+    .field-list {
+      list-style:none;
+      padding-left:0;
+      margin-top:6px;
+    }
+    .field-list li { margin-bottom:4px; }
+
+    .small {
+      font-size:12px;
+      color:#6b7280;
+      margin-top:6px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="topbar">
+        <img src="jds-logo.png" alt="JDS Ceilings &amp; Partitions logo" class="logo" />
+        <div>
+          <div class="brand">JDS Ceilings &amp; Partitions</div>
+          <div class="tagline">Ceilings • Partitions • Drylining</div>
+        </div>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="quote.html">Get a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <h1>Contact Jason</h1>
+
+      <section class="card">
+        <p>
+          Got a ceiling, partition, media wall or repair job in mind?  
+          The quickest way to reach me is WhatsApp or a quick email.
+        </p>
+
+        <div class="btn-row">
+          <a
+            class="btn"
+            href="https://wa.me/447523825903?text=Hi%20Jason,%20I%27d%20like%20to%20chat%20about%20a%20ceiling/partition%20job."
+            target="_blank"
+          >
+            WhatsApp Jason
+          </a>
+          <a
+            class="btn secondary"
+            href="mailto:jdsceiling@gmail.com?subject=Enquiry%20from%20website"
+          >
+            Email Jason
+          </a>
+        </div>
+
+        <p><strong>Phone:</strong> <a href="tel:+447523825903">07523 825903</a></p>
+        <p><strong>Email:</strong> <a href="mailto:jdsceiling@gmail.com">jdsceiling@gmail.com</a></p>
+        <p><strong>Based in:</strong> Newcastle upon Tyne &amp; surrounding areas</p>
+
+        <p class="small">
+          If I miss your call or message while I’m on a job, I’ll get back to you as soon as I’m free.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>What to include for a quick quote</h2>
+        <ul class="field-list">
+          <li>• Area / postcode</li>
+          <li>• What you need (ceiling, partition, media wall, repairs, etc.)</li>
+          <li>• Approx. size or number of rooms</li>
+          <li>• Photos of the area or any damage</li>
+        </ul>
+        <p class="small">
+          The more info you send, the more accurate your first quote will be.
+        </p>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
