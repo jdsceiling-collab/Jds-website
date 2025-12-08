@@ -1,70 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Services | JDS Ceilings & Partitions</title>
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #f4f4f4;
-        }
-        header {
-            background: #0a1a2f;
-            color: white;
-            padding: 15px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        header img { height: 45px; }
-        nav a {
-            margin: 0 10px;
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav {
-            background: #0a1a2f;
-            padding: 10px;
-            text-align: center;
-        }
-        h1 {
-            text-align: center;
-            padding: 20px;
-            color: #0a1a2f;
-        }
-        .service-box {
-            background: white;
-            margin: 20px;
-            padding: 20px;
-            border-radius: 15px;
-        }
-        h2 { color: #0a1a2f; }
-        ul { line-height: 1.7; }
-        footer {
-            background: #0a1a2f;
-            color: white;
-            padding: 15px;
-            text-align: center;
-            margin-top: 40px;
-        }
-        .btn {
-            display: inline-block;
-            margin-top: 10px;
-            background: #007bff;
-            color: white;
-            padding: 10px 16px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services - JDS Ceilings & Partitions</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:#f3f4f6; color:#111827; line-height:1.6; }
+    header { background:#0b1b3d; color:#fff; padding:16px 20px; }
+    .wrap { max-width: 1000px; margin:0 auto; }
+    .brand { font-size:22px; font-weight:700; }
+    .tagline { font-size:13px; opacity:0.8; }
+    nav { margin-top:10px; display:flex; flex-wrap:wrap; gap:16px; font-size:14px; }
+    nav a { color:#e5e7eb; text-decoration:none; }
+    nav a:hover { color:#60a5fa; }
+    main { padding:24px 16px 40px; }
+    h1 { font-size:24px; margin-bottom:6px; }
+    p.lead { font-size:14px; color:#4b5563; margin-bottom:18px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px; }
+    .card { background:#fff; border-radius:14px; padding:16px 16px 18px; box-shadow:0 6px 20px rgba(15,23,42,0.08); }
+    .card h2 { font-size:18px; margin-bottom:6px; }
+    .card p { font-size:14px; margin-bottom:8px; color:#4b5563; }
+    .card ul { padding-left:18px; font-size:14px; color:#374151; }
+    .card ul li { margin-bottom:4px; }
+  </style>
 </head>
-
 <body>
+  <header>
+    <div class="wrap">
+      <div class="brand">JDS Ceilings &amp; Partitions</div>
+      <div class="tagline">Ceilings • Partitions • Drylining</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="quote.html">Get a Quote</a>
+      </nav>
+    </div>
+  </header>
 
-<header>
-    <img src="https://i.imgur.com/0Xj5F2G.png" alt
+  <main>
+    <div class="wrap">
+      <h1>Services</h1>
+      <p class="lead">All types of ceiling and drylining work, plus media walls and property repairs across Newcastle and the North East.</p>
+
+      <section class="grid">
+        <article class="card">
+          <h2>Suspended Ceilings &amp; MF Systems</h2>
+          <p>For homes, offices, schools, shops, care homes and more.</p>
+          <ul>
+            <li>MF ceilings</li>
+            <li>Suspended grid ceilings</li>
+            <li>Ceiling tile replacement</li>
+            <li>Plasterboard ceilings &amp; bulkheads</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>Partitions &amp; Drylining</h2>
+          <p>Build new rooms or tidy up awkward layouts.</p>
+          <ul>
+            <li>Metal stud walls &amp; partitions</li>
+            <li>Room splits &amp; wall moves</li>
+            <li>Plasterboard lining &amp; repairs</li>
+            <li>Soundproofing &amp; insulation upgrades</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>Media Walls &amp; Features</h2>
+          <p>Modern TV feature walls built to suit your space and budget.</p>
+          <ul>
+            <li>Media walls &amp; TV units</li>
+            <li>Recesses for TVs, fires &amp; speakers</li>
+            <li>Shelving, alcoves &amp; lighting details</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>Repairs &amp; Landlord Work</h2>
+          <p>Ideal for landlords, agents and homeowners.</p>
+          <ul>
+            <li>Ceiling &amp; wall repairs</li>
+            <li>Patch plasterboard &amp; water damage</li>
+            <li>Grid &amp; tile repairs after leaks</li>
+            <li>Small general property maintenance</li>
+          </ul>
+        </article>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
