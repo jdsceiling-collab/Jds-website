@@ -1,109 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gallery - JDS Ceilings & Partitions</title>
-  <link rel="stylesheet" href="styles.css">
-
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f4f4f4;
-    }
-
-    header {
-      background: #08223b;
-      padding: 20px;
-      text-align: center;
-      color: white;
-    }
-
-    nav a {
-      margin: 0 12px;
-      color: white;
-      font-weight: bold;
-      text-decoration: none;
-      font-size: 18px;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
-    }
-
-    h1 {
-      text-align: center;
-    }
-
-    /* GRID LAYOUT */
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 15px;
-      margin-top: 20px;
-    }
-
-    .gallery-grid img,
-    .gallery-grid video {
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-    }
-
-    .gallery-item {
-      background: white;
-      padding: 10px;
-      border-radius: 12px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | JDS Ceilings & Partitions</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-<header>
-  <h1>JDS Ceilings & Partitions</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="about.html">About</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+<header class="header">
+    <div class="logo">JDS Ceilings & Partitions</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 </header>
 
-<div class="container">
-  <h1>Gallery</h1>
-  <p>Photos & video from recent ceiling, partition & drylining projects.</p>
+<section class="hero-small">
+    <h1>Project Gallery</h1>
+    <p>A look at our recent ceiling & partition installations.</p>
+</section>
 
-  <div class="gallery-grid">
+<section class="gallery-grid">
 
-    <!-- VIDEO BLOCK -->
-    <div class="gallery-item">
-      <video controls>
-        <source src="https://github.com/jdsceiling-collab/Jds-website/raw/refs/heads/main/FB_VID_5246001088414606162.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <p style="text-align:center; font-weight:bold;">Ceiling Installation Video</p>
-    </div>
+    <img src="gallery1.jpg" alt="Ceiling installation">
+    <img src="gallery2.jpg" alt="MF Ceiling">
+    <img src="gallery3.jpg" alt="Grid ceiling">
+    <img src="gallery4.jpg" alt="Stud wall">
+    <img src="gallery5.jpg" alt="Commercial ceiling">
+    <img src="gallery6.jpg" alt="Drylining work">
 
-    <!-- IMAGE EXAMPLES (replace with your own images) -->
-    <div class="gallery-item">
-      <img src="https://via.placeholder.com/400x300?text=Ceiling+Grid" alt="Ceiling Grid Install">
-    </div>
+</section>
 
-    <div class="gallery-item">
-      <img src="https://via.placeholder.com/400x300?text=MF+Ceiling" alt="MF Ceiling">
-    </div>
-
-    <div class="gallery-item">
-      <img src="https://via.placeholder.com/400x300?text=Stud+Wall" alt="Stud Wall Build">
-    </div>
-
-  </div>
-</div>
+<footer class="footer">
+    © 2025 JDS Ceilings & Partitions – All rights reserved.
+</footer>
 
 </body>
 </html>
