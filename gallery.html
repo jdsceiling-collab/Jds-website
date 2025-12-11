@@ -3,33 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | JDS Ceilings & Partitions</title>
     <link rel="stylesheet" href="styles.css">
-    <title>Gallery – JDS Ceilings & Partitions</title>
-</head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f7fa;
+            color: #1a1a1a;
+        }
 
+        header {
+            background: #0d2a47;
+            padding: 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+            font-size: 16px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 36px;
+            color: #0d2a47;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+            padding: 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .gallery-grid img,
+        .gallery-grid video {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            background: #0d2a47;
+            color: white;
+            font-size: 14px;
+        }
+    </style>
+</head>
 <body>
-<header class="navbar">
-    <div class="logo">JDS Ceilings &<br>Partitions</div>
+
+<header>
+    <div style="font-size: 22px; font-weight: bold;">JDS Ceilings & Partitions</div>
+
     <nav>
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
-        <a href="gallery.html" class="active">Gallery</a>
+        <a href="gallery.html">Gallery</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
     </nav>
 </header>
 
-<section class="page-header">
-    <h1>Our Work</h1>
-    <p>A look at some of our recent installations across the North East.</p>
-</section>
+<h1>Our Work</h1>
 
-<section class="gallery-grid">
-    <img src="ceiling-hero.jpg" alt="Ceiling Installation">
-</section>
+<div class="gallery-grid">
 
-<footer class="footer">
-    © 2025 JDS Ceilings & Partitions
+    <!-- Photo 1 -->
+    <img src="ceiling-hero.jpg" alt="Ceiling installation">
+    
+    <!-- Photo 2 -->
+    <img src="image1.jpg" alt="Finished grid ceiling">
+
+    <!-- Photo 3 -->
+    <img src="image2.jpg" alt="Ceiling stripped back for repairs">
+
+    <!-- Video -->
+    <video controls>
+        <source src="FB_VID_5246001088414606162.mp4" type="video/mp4">
+    </video>
+</div>
+
+<footer>
+    © 2025 JDS Ceilings & Partitions — All rights reserved.
 </footer>
+
 </body>
 </html>
