@@ -3,100 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery | JDS Ceilings & Partitions</title>
+    <title>Our Work - JDS Ceilings & Partitions</title>
     <link rel="stylesheet" href="styles.css">
+
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #f5f7fa;
-            color: #1a1a1a;
-        }
-
-        header {
-            background: #0d2a47;
-            padding: 18px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: white;
-        }
-
-        header a {
-            color: white;
-            text-decoration: none;
-            margin-left: 15px;
-            font-size: 16px;
-        }
-
-        h1 {
-            text-align: center;
-            margin-top: 40px;
-            font-size: 36px;
-            color: #0d2a47;
+        .gallery-container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
         }
 
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 15px;
-            padding: 20px;
-            max-width: 1100px;
-            margin: auto;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
         }
 
         .gallery-grid img,
         .gallery-grid video {
             width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            margin-top: 30px;
-            background: #0d2a47;
-            color: white;
-            font-size: 14px;
+            border-radius: 12px;
+            display: block;
         }
     </style>
 </head>
+
 <body>
 
 <header>
-    <div style="font-size: 22px; font-weight: bold;">JDS Ceilings & Partitions</div>
-
+    <div class="logo">JDS Ceilings &<br>Partitions</div>
     <nav>
         <a href="index.html">Home</a>
+        <a href="gallery.html" class="active">Gallery</a>
         <a href="services.html">Services</a>
-        <a href="gallery.html">Gallery</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
     </nav>
 </header>
 
-<h1>Our Work</h1>
+<section class="hero small-hero">
+    <h1>Our Work</h1>
+</section>
 
-<div class="gallery-grid">
+<div class="gallery-container">
+    <div class="gallery-grid">
 
-    <!-- Photo 1 -->
-    <img src="ceiling-hero.jpg" alt="Ceiling installation">
-    
-    <!-- Photo 2 -->
-    <img src="image1.jpg" alt="Finished grid ceiling">
+        <!-- IMAGES -->
+        <img src="20240722_152321.jpg">
+        <img src="20240722_152337.jpg">
+        <img src="20240722_152343.jpg">
+        <img src="FB_IMG_17652288926.jpg">
+        <img src="FB_IMG_17652288958.jpg">
 
-    <!-- Photo 3 -->
-    <img src="image2.jpg" alt="Ceiling stripped back for repairs">
+        <!-- VIDEOS -->
+        <video controls src="20240722_114623.mp4"></video>
+        <video controls src="20240722_121530.mp4"></video>
+        <video controls src="20240729_141822.mp4"></video>
+        <video controls src="20240729_141841.mp4"></video>
+        <video controls src="20240730_132710.mp4"></video>
+        <video controls src="20241203_101446.mp4"></video>
+        <video controls src="20250211_143728.mp4"></video>
+        <video controls src="20250523_080514.mp4"></video>
+        <video controls src="20250531_150333.mp4"></video>
+        <video controls src="20250601_075402.mp4"></video>
+        <video controls src="20250601_075757.mp4"></video>
+        <video controls src="FB_VID_5246001088414606162.mp4"></video>
+        <video controls src="IMG_4835.MOV.mp4"></video>
+        <video controls src="Snapchat-137512662.mp4"></video>
+        <video controls src="Snapchat-157302243.mp4"></video>
+        <video controls src="Snapchat-1687926928.mp4"></video>
+        <video controls src="Snapchat-248239418.mp4"></video>
 
-    <!-- Video -->
-    <video controls>
-        <source src="FB_VID_5246001088414606162.mp4" type="video/mp4">
-    </video>
+    </div>
 </div>
 
 <footer>
-    © 2025 JDS Ceilings & Partitions — All rights reserved.
+    <p>© 2025 JDS Ceilings & Partitions</p>
 </footer>
 
 </body>
