@@ -1,96 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services - JDS Ceilings & Partitions</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:#f3f4f6; color:#111827; line-height:1.6; }
-    header { background:#0b1b3d; color:#fff; padding:16px 20px; }
-    .wrap { max-width: 1000px; margin:0 auto; }
-    .brand { font-size:22px; font-weight:700; }
-    .tagline { font-size:13px; opacity:0.8; }
-    nav { margin-top:10px; display:flex; flex-wrap:wrap; gap:16px; font-size:14px; }
-    nav a { color:#e5e7eb; text-decoration:none; }
-    nav a:hover { color:#60a5fa; }
-    main { padding:24px 16px 40px; }
-    h1 { font-size:24px; margin-bottom:6px; }
-    p.lead { font-size:14px; color:#4b5563; margin-bottom:18px; }
-    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px; }
-    .card { background:#fff; border-radius:14px; padding:16px 16px 18px; box-shadow:0 6px 20px rgba(15,23,42,0.08); }
-    .card h2 { font-size:18px; margin-bottom:6px; }
-    .card p { font-size:14px; margin-bottom:8px; color:#4b5563; }
-    .card ul { padding-left:18px; font-size:14px; color:#374151; }
-    .card ul li { margin-bottom:4px; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | JDS Ceilings & Partitions</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <div class="wrap">
-      <div class="brand">JDS Ceilings &amp; Partitions</div>
-      <div class="tagline">Ceilings • Partitions • Drylining</div>
-      <nav>
+
+<header class="header">
+    <div class="logo">JDS Ceilings & Partitions</div>
+    <nav>
         <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="about.html">About</a>
+        <a href="services.html" class="active">Services</a>
         <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
-        <a href="quote.html">Get a Quote</a>
-      </nav>
+    </nav>
+</header>
+
+<section class="hero-small">
+    <h1>Our Services</h1>
+    <p>Professional ceilings, partitions & drylining across Newcastle.</p>
+</section>
+
+<section class="services-container">
+    
+    <div class="service-card">
+        <h3>Suspended Ceilings</h3>
+        <p>Lay-in grid systems, concealed ceilings and acoustic solutions for commercial and domestic spaces.</p>
     </div>
-  </header>
 
-  <main>
-    <div class="wrap">
-      <h1>Services</h1>
-      <p class="lead">All types of ceiling and drylining work, plus media walls and property repairs across Newcastle and the North East.</p>
-
-      <section class="grid">
-        <article class="card">
-          <h2>Suspended Ceilings &amp; MF Systems</h2>
-          <p>For homes, offices, schools, shops, care homes and more.</p>
-          <ul>
-            <li>MF ceilings</li>
-            <li>Suspended grid ceilings</li>
-            <li>Ceiling tile replacement</li>
-            <li>Plasterboard ceilings &amp; bulkheads</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <h2>Partitions &amp; Drylining</h2>
-          <p>Build new rooms or tidy up awkward layouts.</p>
-          <ul>
-            <li>Metal stud walls &amp; partitions</li>
-            <li>Room splits &amp; wall moves</li>
-            <li>Plasterboard lining &amp; repairs</li>
-            <li>Soundproofing &amp; insulation upgrades</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <h2>Media Walls &amp; Features</h2>
-          <p>Modern TV feature walls built to suit your space and budget.</p>
-          <ul>
-            <li>Media walls &amp; TV units</li>
-            <li>Recesses for TVs, fires &amp; speakers</li>
-            <li>Shelving, alcoves &amp; lighting details</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <h2>Repairs &amp; Landlord Work</h2>
-          <p>Ideal for landlords, agents and homeowners.</p>
-          <ul>
-            <li>Ceiling &amp; wall repairs</li>
-            <li>Patch plasterboard &amp; water damage</li>
-            <li>Grid &amp; tile repairs after leaks</li>
-            <li>Small general property maintenance</li>
-          </ul>
-        </article>
-      </section>
+    <div class="service-card">
+        <h3>MF Ceilings</h3>
+        <p>High-quality MF metal frame ceilings for smooth, modern finishes with lighting integration.</p>
     </div>
-  </main>
+
+    <div class="service-card">
+        <h3>Stud Walls & Partitions</h3>
+        <p>Metal and timber stud walls for offices, homes and industrial spaces. Fire-rated, acoustic and feature walls available.</p>
+    </div>
+
+    <div class="service-card">
+        <h3>Ceiling Repairs</h3>
+        <p>Tile replacement, fire damage repair, lighting cut-outs and patching for all ceiling systems.</p>
+    </div>
+
+    <div class="service-card">
+        <h3>Drylining</h3>
+        <p>Dot & dab, plasterboard fixing and skimming-ready installations for landlords and businesses.</p>
+    </div>
+
+    <div class="service-card">
+        <h3>Commercial Fit-Outs</h3>
+        <p>Full interior works including ceilings, partitions, MF systems and refurbishment works.</p>
+    </div>
+
+</section>
+
+<footer class="footer">
+    © 2025 JDS Ceilings & Partitions – All rights reserved.
+</footer>
+
 </body>
 </html>
