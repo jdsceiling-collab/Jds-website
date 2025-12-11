@@ -4,26 +4,37 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>JDS Ceilings & Partitions | Newcastle</title>
-<link rel="stylesheet" href="styles.css">
-<style>
-    body { margin:0; font-family:Arial, sans-serif; background:#f4f6f9; color:#1a1a1a; }
 
-    /* Header */
+<style>
+    body {
+        margin:0;
+        font-family: Arial, sans-serif;
+        background:#f4f6f9;
+        color:#1a1a1a;
+    }
+
+    /* HEADER */
     header {
         background:#0b2a4a;
-        color:white;
         padding:18px 0;
         box-shadow:0 2px 6px rgba(0,0,0,0.15);
+        position:sticky;
+        top:0;
+        z-index:1000;
     }
     .header-container {
-        width:90%;
         max-width:1200px;
+        width:90%;
         margin:auto;
         display:flex;
         justify-content:space-between;
         align-items:center;
     }
-    .logo { font-size:24px; font-weight:bold; }
+    .logo {
+        color:white;
+        font-size:24px;
+        font-weight:bold;
+    }
     nav a {
         color:white;
         text-decoration:none;
@@ -31,78 +42,106 @@
         font-size:16px;
         font-weight:500;
     }
+    nav a:hover {
+        text-decoration:underline;
+    }
 
     /* HERO SECTION */
     .hero {
-        background:#e9eef4;
-        padding:90px 20px;
+        background:url('ceiling-hero.jpg') center/cover no-repeat;
+        padding:140px 20px;
         text-align:center;
+        color:white;
+        position:relative;
     }
-    .hero h1 {
-        font-size:40px;
-        color:#0b2a4a;
-        font-weight:800;
+
+    /* subtle dark overlay for readability */
+    .hero::before {
+        content:"";
+        position:absolute;
+        top:0; left:0;
+        width:100%; height:100%;
+        background:rgba(0,0,0,0.35);
+    }
+
+    .hero-content {
+        position:relative;
+        z-index:2;
         max-width:700px;
         margin:auto;
     }
+
+    .hero h1 {
+        font-size:40px;
+        font-weight:800;
+        margin-bottom:15px;
+    }
     .hero p {
         font-size:18px;
-        max-width:650px;
-        margin:20px auto;
-        color:#333;
+        margin-bottom:22px;
+        opacity:0.9;
     }
     .hero button {
         background:#0066ff;
         color:white;
-        padding:15px 25px;
+        padding:14px 25px;
         font-size:18px;
         border:none;
         border-radius:6px;
-        margin-top:15px;
         cursor:pointer;
     }
+    .hero button:hover {
+        background:#004fcc;
+    }
 
-    /* WHY CHOOSE US */
-    .section {
-        width:90%;
+    /* SECTION BOX */
+    .section-box {
         max-width:1200px;
-        margin:50px auto;
+        width:90%;
         background:white;
-        padding:40px;
-        border-radius:8px;
+        margin:40px auto;
+        padding:35px;
+        border-radius:10px;
         box-shadow:0 2px 10px rgba(0,0,0,0.08);
     }
-    .section h2 {
+    .section-box h2 {
         color:#0b2a4a;
         font-size:28px;
         margin-bottom:15px;
     }
-    .section p { font-size:17px; line-height:1.6; }
 
-    /* SERVICES */
+    /* SERVICES GRID */
     .services {
         display:grid;
         grid-template-columns:1fr 1fr;
         gap:20px;
         margin-top:20px;
     }
-    .service-box {
-        background:#f1f5fa;
-        padding:25px;
+    .service-card {
+        background:#eef3f8;
+        padding:20px;
         border-radius:8px;
+        border:1px solid #dce3ec;
     }
-    .service-box h3 {
+    .service-card h3 {
         color:#0b2a4a;
         margin-bottom:10px;
     }
 
-    /* Footer */
+    /* FOOTER */
     footer {
         background:#0b2a4a;
         color:white;
         padding:30px 20px;
-        margin-top:50px;
         text-align:center;
+        margin-top:40px;
+    }
+
+    /* MOBILE */
+    @media(max-width:700px){
+        nav a { margin-left:12px; font-size:14px; }
+        .services { grid-template-columns:1fr; }
+        .hero h1 { font-size:30px; }
     }
 </style>
 </head>
@@ -122,46 +161,52 @@
     </div>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-    <h1>Professional ceilings, partitions & drylining across Newcastle</h1>
-    <p>Suspended ceilings, MF systems, stud walls & reliable repairs for homes, landlords and commercial clients.</p>
-    <a href="quote.html"><button>Request a Quote</button></a>
-</section>
-
-<section class="section">
-    <h2>Why Choose JDS?</h2>
-    <p>With over 10 years’ experience delivering clean, tidy and reliable workmanship, JDS Ceilings & Partitions provides expert installation and repair services across Newcastle and surrounding areas.</p>
-</section>
-
-<section class="section">
-    <h2>Our Services</h2>
-
-    <div class="services">
-        <div class="service-box">
-            <h3>Suspended Ceilings</h3>
-            <p>Lay-in grid, concealed systems, office ceilings & full installations.</p>
-        </div>
-
-        <div class="service-box">
-            <h3>MF Ceilings</h3>
-            <p>Professional MF metal frame systems for smooth, modern ceilings.</p>
-        </div>
-
-        <div class="service-box">
-            <h3>Stud Walls & Partitions</h3>
-            <p>Commercial & domestic partitions, soundproofing and more.</p>
-        </div>
-
-        <div class="service-box">
-            <h3>Ceiling Repairs</h3>
-            <p>Tile replacement, water damage repair & maintenance work.</p>
-        </div>
+    <div class="hero-content">
+        <h1>Professional Ceilings, Partitions & Drylining</h1>
+        <p>High-quality installations for homes, landlords & commercial clients across Newcastle.</p>
+        <a href="quote.html"><button>Request a Quote</button></a>
     </div>
 </section>
 
+<!-- WHY CHOOSE US -->
+<div class="section-box">
+    <h2>Why Choose JDS?</h2>
+    <p>With over 10 years of experience delivering clean, reliable workmanship, JDS Ceilings & Partitions provides expert installation of suspended ceilings, MF systems, stud walls and drylining across the North East.</p>
+</div>
+
+<!-- SERVICES -->
+<div class="section-box">
+    <h2>Our Services</h2>
+    <div class="services">
+
+        <div class="service-card">
+            <h3>Suspended Ceilings</h3>
+            <p>Lay-in grid systems, tiles, office ceilings & full installations.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>MF Ceilings</h3>
+            <p>Metal frame ceilings with smooth modern finishes.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Stud Walls & Partitions</h3>
+            <p>Domestic & commercial stud walls, office partitions & soundproofing.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Ceiling Repairs</h3>
+            <p>Water damage, tile replacement & general ceiling maintenance.</p>
+        </div>
+
+    </div>
+</div>
+
 <footer>
-    JDS Ceilings & Partitions — Newcastle Upon Tyne<br>
-    Free quotes • Fast replies • 07523 825903
+    © JDS Ceilings & Partitions — Newcastle  
+    <br>Free quotes • Fast replies • 07523 825903
 </footer>
 
 </body>
