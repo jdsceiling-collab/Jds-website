@@ -1,161 +1,106 @@
-/* GLOBAL RESET */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
 body {
-    background: #f7f7f7;
-    color: #222;
-    line-height: 1.6;
+  line-height: 1.6;
+  color: #222;
 }
 
-/* HEADER / NAVBAR */
-.navbar {
-    background: #004a7c;
-    color: white;
-    padding: 18px 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 4px solid #007bdc;
+/* ===== HEADER ===== */
+.site-header {
+  background: #1f4f82;
+  padding: 14px 16px;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
 }
 
 .logo {
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 1.1;
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
-nav a {
-    color: white;
-    margin-left: 20px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.2s;
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  flex-wrap: wrap;
 }
 
-nav a:hover {
-    opacity: 0.8;
+.main-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
 }
 
-nav a.active {
-    text-decoration: underline;
-    text-underline-offset: 4px;
+.main-nav a:hover {
+  border-bottom: 2px solid rgba(255,255,255,0.6);
 }
 
-/* PAGE TITLES */
-section h1,
-section h2 {
-    margin-bottom: 15px;
-    color: #004a7c;
+/* ===== HERO ===== */
+.hero {
+  position: relative;
+  height: 60vh;
+  overflow: hidden;
 }
 
-/* BUTTONS */
-button,
-.cta-btn,
-.contact-btn {
-    background: #0099ff;
-    padding: 14px 26px;
-    color: white;
-    font-size: 18px;
-    border-radius: 8px;
-    border: none;
-    text-decoration: none;
-    transition: 0.2s;
-    display: inline-block;
+.hero video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-button:hover,
-.cta-btn:hover,
-.contact-btn:hover {
-    opacity: 0.85;
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
 }
 
-/* GENERAL PAGE LAYOUT */
-section {
-    padding: 40px 20px;
-    max-width: 1000px;
-    margin: auto;
+.hero-overlay h1 {
+  font-size: 34px;
+  margin-bottom: 14px;
 }
 
-/* GALLERY PAGE */
-.image-grid img,
-.video-block video {
-    width: 100%;
-    border-radius: 12px;
+.hero-overlay a {
+  background: #4da3ff;
+  color: #fff;
+  padding: 14px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 16px;
 }
 
-.image-grid {
-    margin-bottom: 40px;
+/* ===== CONTENT ===== */
+.section {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 16px;
 }
 
-/* LIGHTBOX (image popup) */
-#lightbox {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.85);
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
+.section h2 {
+  margin-bottom: 16px;
 }
 
-#lightbox img {
-    max-width: 95%;
-    max-height: 95%;
-    border-radius: 12px;
-}
-
-/* CONTACT PAGE FORM */
-form {
-    background: white;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.08);
-}
-
-form input,
-form textarea {
-    width: 100%;
-    padding: 14px;
-    margin-bottom: 15px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-}
-
-form textarea {
-    height: 130px;
-}
-
-/* FOOTER */
+/* ===== FOOTER ===== */
 footer {
-    background: #004a7c;
-    color: white;
-    text-align: center;
-    padding: 18px;
-    margin-top: 40px;
-}
-
-/* MOBILE RESPONSIVE */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    nav a {
-        margin: 10px;
-        display: inline-block;
-    }
-
-    .hero-overlay h1 {
-        font-size: 28px !important;
-    }
+  background: #1f4f82;
+  color: #fff;
+  text-align: center;
+  padding: 14px;
+  margin-top: 40px;
 }
