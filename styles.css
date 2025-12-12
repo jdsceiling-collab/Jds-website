@@ -133,7 +133,24 @@ footer {
     height: 45vh;
     max-height: 420px;
   }
+/* FIX MOBILE NAV LIST */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
+nav li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+@media (max-width: 768px) {
+  nav li {
+    display: block;
+    margin: 10px 0;
+  }
+}
   .hero-content h2 {
     font-size: 26px;
   }
