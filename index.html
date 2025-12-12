@@ -1,212 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JDS Ceilings & Partitions | Newcastle</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JDS Ceilings & Partitions</title>
+    <link rel="stylesheet" href="styles.css">
 
-<style>
-    body {
-        margin:0;
-        font-family: Arial, sans-serif;
-        background:#f4f6f9;
-        color:#1a1a1a;
-    }
+    <!-- Google Ads Tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-4088091774"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-4088091774');
+    </script>
 
-    /* HEADER */
-    header {
-        background:#0b2a4a;
-        padding:18px 0;
-        box-shadow:0 2px 6px rgba(0,0,0,0.15);
-        position:sticky;
-        top:0;
-        z-index:1000;
-    }
-    .header-container {
-        max-width:1200px;
-        width:90%;
-        margin:auto;
-        display:flex;
-        justify-content:space-between;
-        align-items:center;
-    }
-    .logo {
-        color:white;
-        font-size:24px;
-        font-weight:bold;
-    }
-    nav a {
-        color:white;
-        text-decoration:none;
-        margin-left:25px;
-        font-size:16px;
-        font-weight:500;
-    }
-    nav a:hover {
-        text-decoration:underline;
-    }
+    <style>
+        /* VIDEO HERO */
 
-    /* HERO SECTION */
-    .hero {
-        background:url('ceiling-hero.jpg') center/cover no-repeat;
-        padding:140px 20px;
-        text-align:center;
-        color:white;
-        position:relative;
-    }
+        .hero-video-container {
+            position: relative;
+            width: 100%;
+            height: 70vh;
+            overflow: hidden;
+        }
 
-    /* subtle dark overlay for readability */
-    .hero::before {
-        content:"";
-        position:absolute;
-        top:0; left:0;
-        width:100%; height:100%;
-        background:rgba(0,0,0,0.35);
-    }
+        .hero-video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-    .hero-content {
-        position:relative;
-        z-index:2;
-        max-width:700px;
-        margin:auto;
-    }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.45);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
 
-    .hero h1 {
-        font-size:40px;
-        font-weight:800;
-        margin-bottom:15px;
-    }
-    .hero p {
-        font-size:18px;
-        margin-bottom:22px;
-        opacity:0.9;
-    }
-    .hero button {
-        background:#0066ff;
-        color:white;
-        padding:14px 25px;
-        font-size:18px;
-        border:none;
-        border-radius:6px;
-        cursor:pointer;
-    }
-    .hero button:hover {
-        background:#004fcc;
-    }
+        .hero-overlay h1 {
+            font-size: 42px;
+            font-weight: 800;
+            line-height: 1.2;
+        }
 
-    /* SECTION BOX */
-    .section-box {
-        max-width:1200px;
-        width:90%;
-        background:white;
-        margin:40px auto;
-        padding:35px;
-        border-radius:10px;
-        box-shadow:0 2px 10px rgba(0,0,0,0.08);
-    }
-    .section-box h2 {
-        color:#0b2a4a;
-        font-size:28px;
-        margin-bottom:15px;
-    }
+        .cta-btn {
+            display: inline-block;
+            background: #0099ff;
+            padding: 14px 26px;
+            color: white;
+            font-size: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            text-decoration: none;
+        }
 
-    /* SERVICES GRID */
-    .services {
-        display:grid;
-        grid-template-columns:1fr 1fr;
-        gap:20px;
-        margin-top:20px;
-    }
-    .service-card {
-        background:#eef3f8;
-        padding:20px;
-        border-radius:8px;
-        border:1px solid #dce3ec;
-    }
-    .service-card h3 {
-        color:#0b2a4a;
-        margin-bottom:10px;
-    }
-
-    /* FOOTER */
-    footer {
-        background:#0b2a4a;
-        color:white;
-        padding:30px 20px;
-        text-align:center;
-        margin-top:40px;
-    }
-
-    /* MOBILE */
-    @media(max-width:700px){
-        nav a { margin-left:12px; font-size:14px; }
-        .services { grid-template-columns:1fr; }
-        .hero h1 { font-size:30px; }
-    }
-</style>
+        .cta-btn:hover {
+            opacity: 0.85;
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
-    <div class="header-container">
-        <div class="logo">JDS Ceilings & Partitions</div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="services.html">Services</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </div>
+<header class="navbar">
+    <div class="logo">JDS Ceilings &<br>Partitions</div>
+    <nav>
+        <a class="active" href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-    <div class="hero-content">
-        <h1>Professional Ceilings, Partitions & Drylining</h1>
-        <p>High-quality installations for homes, landlords & commercial clients across Newcastle.</p>
-        <a href="quote.html"><button>Request a Quote</button></a>
+<!-- ⭐ VIDEO HERO SECTION -->
+<div class="hero-video-container">
+    <video autoplay muted loop playsinline>
+        <source src="20240730_132710.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-overlay">
+        <div>
+            <h1>Suspended Ceilings & Partitions<br> Professionally Installed</h1>
+            <a href="contact.html" class="cta-btn">Request a Free Quote</a>
+        </div>
     </div>
+</div>
+
+<!-- ⭐ MAIN CONTENT -->
+<section style="padding: 40px; max-width: 1000px; margin: auto;">
+    <h2>Why Choose JDS Ceilings & Partitions?</h2>
+    <p>
+        With over 10 years of experience in drylining, suspended ceilings, grid ceilings, MF systems,
+        and partition walls — we deliver high-quality, reliable workmanship across Newcastle and the
+        surrounding areas.
+    </p>
+
+    <p>
+        We handle both domestic and commercial projects including shops, offices, salons,
+        warehouses, schools, and more.
+    </p>
+
+    <a href="services.html" class="cta-btn">View Our Services</a>
 </section>
 
-<!-- WHY CHOOSE US -->
-<div class="section-box">
-    <h2>Why Choose JDS?</h2>
-    <p>With over 10 years of experience delivering clean, reliable workmanship, JDS Ceilings & Partitions provides expert installation of suspended ceilings, MF systems, stud walls and drylining across the North East.</p>
-</div>
-
-<!-- SERVICES -->
-<div class="section-box">
-    <h2>Our Services</h2>
-    <div class="services">
-
-        <div class="service-card">
-            <h3>Suspended Ceilings</h3>
-            <p>Lay-in grid systems, tiles, office ceilings & full installations.</p>
-        </div>
-
-        <div class="service-card">
-            <h3>MF Ceilings</h3>
-            <p>Metal frame ceilings with smooth modern finishes.</p>
-        </div>
-
-        <div class="service-card">
-            <h3>Stud Walls & Partitions</h3>
-            <p>Domestic & commercial stud walls, office partitions & soundproofing.</p>
-        </div>
-
-        <div class="service-card">
-            <h3>Ceiling Repairs</h3>
-            <p>Water damage, tile replacement & general ceiling maintenance.</p>
-        </div>
-
-    </div>
-</div>
-
 <footer>
-    © JDS Ceilings & Partitions — Newcastle  
-    <br>Free quotes • Fast replies • 07523 825903
+    <p>© 2025 JDS Ceilings & Partitions</p>
 </footer>
 
 </body>
