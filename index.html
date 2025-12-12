@@ -5,117 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JDS Ceilings & Partitions</title>
     <link rel="stylesheet" href="styles.css">
-
-    <!-- Google Ads Tracking -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-4088091774"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'AW-4088091774');
-    </script>
-
-    <style>
-        /* VIDEO HERO */
-
-        .hero-video-container {
-            position: relative;
-            width: 100%;
-            height: 70vh;
-            overflow: hidden;
-        }
-
-        .hero-video-container video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.45);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-            padding: 20px;
-        }
-
-        .hero-overlay h1 {
-            font-size: 42px;
-            font-weight: 800;
-            line-height: 1.2;
-        }
-
-        .cta-btn {
-            display: inline-block;
-            background: #0099ff;
-            padding: 14px 26px;
-            color: white;
-            font-size: 20px;
-            border-radius: 8px;
-            margin-top: 20px;
-            text-decoration: none;
-        }
-
-        .cta-btn:hover {
-            opacity: 0.85;
-        }
-    </style>
 </head>
 
 <body>
 
-<header class="navbar">
-    <div class="logo">JDS Ceilings &<br>Partitions</div>
-    <nav>
-        <a class="active" href="index.html">Home</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="services.html">Services</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">JDS Ceilings & Partitions</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
     </nav>
-</header>
 
-<!-- ⭐ VIDEO HERO SECTION -->
-<div class="hero-video-container">
-    <video autoplay muted loop playsinline>
-        <source src="20240730_132710.mp4" type="video/mp4">
-    </video>
+    <!-- HERO VIDEO BANNER -->
+    <header class="hero">
+        <video autoplay loop muted playsinline class="hero-video">
+            <source src="20250601_075402.mp4" type="video/mp4">
+        </video>
 
-    <div class="hero-overlay">
-        <div>
-            <h1>Suspended Ceilings & Partitions<br> Professionally Installed</h1>
-            <a href="contact.html" class="cta-btn">Request a Free Quote</a>
+        <div class="hero-overlay">
+            <h1>Suspended Ceilings & Partition Experts</h1>
+            <p>Serving the North East with Quality, Reliability & Skill</p>
+            <a href="quote.html" class="btn">Get a Free Quote</a>
         </div>
-    </div>
-</div>
+    </header>
 
-<!-- ⭐ MAIN CONTENT -->
-<section style="padding: 40px; max-width: 1000px; margin: auto;">
-    <h2>Why Choose JDS Ceilings & Partitions?</h2>
-    <p>
-        With over 10 years of experience in drylining, suspended ceilings, grid ceilings, MF systems,
-        and partition walls — we deliver high-quality, reliable workmanship across Newcastle and the
-        surrounding areas.
-    </p>
+    <!-- SERVICES SECTION -->
+    <section class="services">
+        <h2>Our Services</h2>
+        <div class="service-grid">
 
-    <p>
-        We handle both domestic and commercial projects including shops, offices, salons,
-        warehouses, schools, and more.
-    </p>
+            <div class="service-box">
+                <h3>Suspended Ceilings</h3>
+                <p>Installation of all grid systems including MF, 600x600 tiles, acoustic ceilings & commercial ceilings.</p>
+            </div>
 
-    <a href="services.html" class="cta-btn">View Our Services</a>
-</section>
+            <div class="service-box">
+                <h3>Partitions</h3>
+                <p>Metal stud partitions, sound-rated walls, office divides & fire-rated systems.</p>
+            </div>
 
-<footer>
-    <p>© 2025 JDS Ceilings & Partitions</p>
-</footer>
+            <div class="service-box">
+                <h3>Drylining</h3>
+                <p>Full drylining services including boarding, dot & dab, plastering preparation & more.</p>
+            </div>
+
+            <div class="service-box">
+                <h3>Commercial Refurbishment</h3>
+                <p>Ceilings, walls, joinery, decoration & full interior upgrades for businesses.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about">
+        <h2>Why Choose JDS?</h2>
+        <p>
+            With years of experience delivering high-quality suspended ceilings and partition systems across the North East,
+            we take pride in providing reliable workmanship, competitive pricing and a flawless finish every time.
+        </p>
+        <a href="gallery.html" class="btn">View Our Work</a>
+    </section>
+
+    <!-- CONTACT CTA -->
+    <section class="cta">
+        <h2>Ready to Start Your Project?</h2>
+        <p>Get in touch today for a fast, free & accurate quotation.</p>
+        <a href="contact.html" class="btn">Contact Us</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2025 JDS Ceilings & Partitions — All Rights Reserved.</p>
+        <a href="tel:07500000000">Call Us</a>
+    </footer>
 
 </body>
 </html>
