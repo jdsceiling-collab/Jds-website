@@ -1,149 +1,29 @@
-/* RESET */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+/* ============================= */
+/* NAVIGATION BULLET FIX */
+/* ============================= */
 
-body {
-  font-family: Arial, sans-serif;
-  background: #f5f5f5;
-  color: #222;
-}
-
-/* HEADER */
-header {
-  background: #0d4f7c;
-  color: white;
-  text-align: center;
-  padding: 15px;
-}
-
-header h1 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-/* NAV */
 nav ul {
   list-style: none;
-  padding: 0;
-}
-
-nav li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav a.active,
-nav a:hover {
-  text-decoration: underline;
-}
-
-/* MOBILE NAV */
-@media (max-width: 768px) {
-  nav li {
-    display: block;
-    margin: 8px 0;
-  }
-}
-
-/* HERO VIDEO */
-.hero {
-  position: relative;
-  width: 100%;
-  max-height: 65vh;       /* 👈 THIS FIXES HUGE VIDEO */
-  overflow: hidden;
-}
-
-.hero video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;     /* 👈 CROPS NICELY */
-}
-
-/* HERO TEXT */
-.hero-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: #0d4f7c;
-}
-
-.hero-content h2 {
-  font-size: 32px;
-  font-weight: bold;
-  margin-bottom: 15px;
-}
-
-/* BUTTON */
-.hero-content a {
-  display: inline-block;
-  padding: 12px 25px;
-  background: #3b82f6;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-}
-
-/* PAGE HEADINGS (MATCHES GALLERY) */
-.page-title {
-  text-align: center;
-  font-size: 32px;
-  font-weight: bold;
-  margin: 40px 0 20px;
-}
-
-/* CONTENT */
-.container {
-  max-width: 1000px;
-  margin: auto;
-  padding: 20px;
-}
-
-/* GALLERY */
-.gallery img,
-.gallery video {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-
-/* FOOTER */
-footer {/* FIX MOBILE HEADER / NAV BULLETS */
-nav ul {
-  list-style: none !important;
   margin: 0;
   padding: 0;
 }
 
 nav li {
-  list-style: none !important;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-/* CLEAN MOBILE NAV LOOK */
+/* MOBILE NAV FIX */
 @media (max-width: 768px) {
   nav ul {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px; /* spacing instead of bullets */
   }
 
   nav li {
-    display: block;
-    margin: 10px 0;
+    list-style: none;
   }
-}
-  background: #0d4f7c;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  margin-top: 40px;
 }
