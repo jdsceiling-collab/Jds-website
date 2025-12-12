@@ -1,90 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JDS Ceilings & Partitions</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body { margin: 0; font-family: Arial, sans-serif; }
+  <meta charset="UTF-8">
+  <title>JDS Ceilings & Partitions | Newcastle</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Suspended ceilings, MF ceilings and partition specialists across Newcastle and the North East.">
 
-        /* HERO VIDEO */
-        .hero {
-            position: relative;
-            width: 100%;
-            height: 65vh;
-            overflow: hidden;
-        }
-        .hero video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transform: translate(-50%, -50%);
-        }
+  <link rel="stylesheet" href="styles.css">
 
-        .hero-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            text-align: center;
-            text-shadow: 0px 0px 10px black;
-            font-size: 2rem;
-            font-weight: 700;
-        }
+  <style>
+    /* HERO VIDEO */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 70vh;
+      overflow: hidden;
+    }
 
-        nav {
-            background: #0d1b3d;
-            padding: 12px;
-            text-align: center;
-        }
+    .hero video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-        nav a {
-            color: white;
-            margin: 0 12px;
-            font-size: 18px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.45);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      padding: 20px;
+    }
 
-        .btn {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 10px 22px;
-            background: #1e65ff;
-            color: white;
-            font-size: 18px;
-            border-radius: 6px;
-            text-decoration: none;
-        }
-    </style>
+    .hero-overlay h1 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .btn {
+      background: #0099ff;
+      color: white;
+      padding: 14px 26px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .home-intro {
+      max-width: 1000px;
+      margin: auto;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .home-points {
+      list-style: none;
+      padding: 0;
+      margin: 25px 0;
+    }
+
+    .home-points li {
+      margin: 8px 0;
+      font-size: 17px;
+    }
+  </style>
 </head>
+
 <body>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="services.html">Services</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+<!-- NAV -->
+<header class="navbar">
+  <div class="logo">JDS Ceilings & Partitions</div>
+  <nav>
+    <a href="index.html" class="active">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
 
-    <!-- HERO SECTION WITH NEW BANNER VIDEO -->
-    <div class="hero">
-        <video autoplay loop muted playsinline>
-            <source src="IMG_4835.MOV.mp4" type="video/mp4">
-        </video>
+<!-- HERO VIDEO BANNER -->
+<section class="hero">
+  <video autoplay muted loop playsinline>
+    <source src="IMG_4835.MOV.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 
-        <div class="hero-text">
-            Professional Ceilings, Partitions & Drylining  
-            <br>
-            <a class="btn" href="quote.html">Request a Quote</a>
-        </div>
-    </div>
+  <div class="hero-overlay">
+    <h1>Ceilings & Partitions<br>Done Right</h1>
+    <a href="contact.html" class="btn">Request a Free Quote</a>
+  </div>
+</section>
+
+<!-- HOMEPAGE CONTENT -->
+<section class="home-intro">
+  <h2>Ceiling & Partition Specialists</h2>
+
+  <p>
+    JDS Ceilings & Partitions provide professional suspended ceilings,
+    MF ceilings and stud wall installations for domestic and commercial
+    projects across Newcastle and the North East.
+  </p>
+
+  <ul class="home-points">
+    <li>✔ 10+ years on-the-tools experience</li>
+    <li>✔ Domestic & commercial work</li>
+    <li>✔ Clean, tidy & reliable workmanship</li>
+    <li>✔ Fully insured</li>
+  </ul>
+
+  <a href="contact.html" class="btn">Get a Quote</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 JDS Ceilings & Partitions</p>
+</footer>
 
 </body>
 </html>
