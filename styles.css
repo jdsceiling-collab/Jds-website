@@ -6,19 +6,19 @@
 }
 
 body {
-  line-height: 1.6;
   color: #222;
+  line-height: 1.6;
 }
 
 /* ===== HEADER ===== */
 .site-header {
   background: #1f4f82;
-  padding: 14px 16px;
 }
 
 .header-inner {
   max-width: 1200px;
   margin: auto;
+  padding: 14px 16px;
   text-align: center;
 }
 
@@ -32,18 +32,18 @@ body {
 .main-nav {
   display: flex;
   justify-content: center;
-  gap: 22px;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
 .main-nav a {
-  color: #fff;
-  text-decoration: none;
+  color: #fff !important;
+  text-decoration: none !important;
   font-size: 16px;
 }
 
 .main-nav a:hover {
-  border-bottom: 2px solid rgba(255,255,255,0.6);
+  border-bottom: 2px solid rgba(255,255,255,0.7);
 }
 
 /* ===== HERO ===== */
@@ -67,21 +67,21 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #fff;
   text-align: center;
+  color: #fff;
 }
 
 .hero-overlay h1 {
   font-size: 34px;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
 .hero-overlay a {
   background: #4da3ff;
   color: #fff;
-  padding: 14px 22px;
-  border-radius: 6px;
   text-decoration: none;
+  padding: 14px 24px;
+  border-radius: 6px;
   font-size: 16px;
 }
 
@@ -101,6 +101,6 @@ footer {
   background: #1f4f82;
   color: #fff;
   text-align: center;
-  padding: 14px;
+  padding: 16px;
   margin-top: 40px;
 }
